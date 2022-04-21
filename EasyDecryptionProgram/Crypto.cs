@@ -25,7 +25,6 @@ class Crypto
                 temp = temp - 127;
 
             chars[counter] = Convert.ToChar(temp);
-            File.AppendAllText(@"C:\Programmieren\Test.txt", chars[counter].ToString() + " - " + temp + "\n");
             counter++;
         }
         return new string(chars);
