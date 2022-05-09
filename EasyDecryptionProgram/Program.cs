@@ -15,7 +15,7 @@ namespace EasyDecryptionProgram
                 Console.WriteLine("Type your Command");
                 switch (Console.ReadLine())
                 {
-                    default: return;
+                    default: continue;
 
 
                     case "Decrypt":
@@ -25,7 +25,7 @@ namespace EasyDecryptionProgram
                         string TextD = Console.ReadLine();
                         Crypto cryptoD = new Crypto(SeedD);
                         Console.WriteLine(cryptoD.Decrypt(TextD));
-                        break;
+                        continue;
 
                     case "Encrypt":
                         Console.WriteLine("Seed:");
@@ -34,16 +34,16 @@ namespace EasyDecryptionProgram
                         string TextE = Console.ReadLine();
                         Crypto cryptoE = new Crypto(SeedE);
                         Console.WriteLine(cryptoE.Encrypt(TextE));
-                        break;
+                        continue;
 
                     case "GenerateSeed":
                         Console.WriteLine(Crypto.GenerateSeed());
-                        break;
+                        continue;
 
                     case "Test":
                         int i = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine(Convert.ToChar(i));
-                        break;
+                        continue;
                         
                 }
             }
